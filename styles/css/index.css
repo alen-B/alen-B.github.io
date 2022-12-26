@@ -1,0 +1,339 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 1180px;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    font-family: PingFangSC-Light, PingFang SC;
+    flex-direction: column;
+    align-items: center;
+}
+#icon {
+    width: 49px;
+    height: 40px;
+    margin-left: 144px;
+}
+#nav {
+    width: 100%;
+    height: 72px;
+    min-width: 1180px;
+    background-color: #000;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+}
+#nav ul {
+    width: 100%;
+    margin-right: 141px;
+    display: flex;
+    justify-content: space-around;
+}
+#nav ul li {
+    line-height: 34px;
+    font-weight: bolder;
+    text-align: center;
+}
+#nav ul li a {
+    color: #fff;
+}
+#nav ul li a:hover {
+    color: #F18652;
+}
+.birth_bg {
+    width: 1440px;
+    display: block;
+    height: 724px;
+    background-image: url(../../image/birth_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.birth_bg_des {
+    flex-direction: column;
+    height: 724px;
+    margin-left: 55%;
+    margin-top: 120px;
+}
+.birth_bg_des span {
+    display: block;
+}
+.title_size {
+    font-size: 52px;
+}
+.birth_bg_title_02 {
+    font-size: 32px;
+    margin-top: 30px;
+}
+.birth_bg_title_03 {
+    font-size: 18px;
+    margin-top: 13px;
+}
+.birth_bg_des_01 {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #737378;
+}
+.birth_bg_des_02 {
+    font-size: 18px;
+    margin-top: 18px;
+}
+.birth_bg_des_03 {
+    font-size: 18px;
+    margin-top: 18px;
+}
+.protocol_01 {
+    width: 1440px;
+    display: block;
+    height: 1025px;
+    background-image: url(../../image/protocol_bg_01.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.new_protocol {
+    position: absolute;
+    font-size: 52px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    margin-left: 135px;
+    margin-top: 64px;
+}
+.protocol_01_des {
+    flex-direction: column;
+    margin-top: 334px;
+    margin-left: 55%;
+    height: 691px;
+}
+.protocol_01 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 21px;
+    color: #26253C;
+}
+.protocol_02 {
+    width: 1440px;
+    display: block;
+    height: 1024px;
+    background-image: url(../../image/protocol_bg_02.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.protocol_02_des {
+    flex-direction: column;
+    margin-top: 334px;
+    margin-left: 55%;
+    height: 690px;
+}
+.protocol_02 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 21px;
+    color: #26253C;
+}
+.protocol_03 {
+    width: 1440px;
+    display: block;
+    height: 1024px;
+    background-image: url(../../image/protocol_bg_03.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.protocol_03_des {
+    flex-direction: column;
+    margin-top: 201px;
+    margin-left: 136px;
+    height: 690px;
+}
+.protocol_03 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 8px;
+    color: #26253C;
+}
+.protocol_04 {
+    width: 1440px;
+    display: block;
+    height: 1024px;
+    background-image: url(../../image/protocol_bg_04.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.protocol_04_des {
+    flex-direction: column;
+    margin-top: 334px;
+    margin-left: 55%;
+    height: 690px;
+}
+.protocol_04 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 21px;
+    color: #26253C;
+}
+.protocol_05 {
+    width: 1440px;
+    display: block;
+    height: 1024px;
+    background-image: url(../../image/protocol_bg_05.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.protocol_05_des {
+    flex-direction: column;
+    margin-top: 371px;
+    margin-left: 136px;
+    height: 690px;
+}
+.protocol_05 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 8px;
+    color: #26253C;
+}
+.protocol_06 {
+    width: 1440px;
+    display: block;
+    height: 1024px;
+    background-image: url(../../image/protocol_bg_06.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.protocol_06_title {
+    position: absolute;
+    flex-direction: column;
+    margin-top: 86px;
+    margin-left: 144px;
+}
+.protocol_06_des {
+    flex-direction: column;
+    margin-top: 334px;
+    margin-left: 65%;
+    height: 690px;
+}
+.protocol_06 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 21px;
+    color: #26253C;
+}
+.mining_stamps {
+    width: 1440px;
+    height: 587px;
+    background: #F4F6F7;
+    padding-top: 90px;
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+.oneline {
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+}
+.mining_stamps_num {
+    width: 39px;
+    height: 25px;
+}
+.mining_stamps .item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 24px;
+    flex: 1;
+    padding-top: 25px;
+    padding-bottom: 22px;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin-right: 24px;
+}
+.competitive_analysis {
+    padding-top: 46px;
+    width: 1440px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.competitive_analysis .img {
+    width: 1105px;
+    height: 190px;
+    margin-top: 35px;
+    margin: 0 auto;
+}
+.competitive_analysis .des {
+    color: #A1A1A6;
+    font-size: 14px;
+    width: 1105px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+.problem_description{
+    display: flex;
+    flex-direction: row;
+    padding-left: 144px;
+    padding-right: 144px;
+    margin-top: 24px;
+    background-color: #F4F6F7;
+    height: 266px;
+    align-items: center;
+}
+
+.competitive_analysis .num{
+    width: 75px;
+    height: 30px;
+    margin-top: -10px;
+}
+.competitive_analysis .item {
+    display: flex;
+    flex-direction: column;
+    background-color: #373859;
+    border-radius: 8px;
+    color: white;
+    font-size: 16sp;
+    height: 154px;
+    flex: 1;
+    font-family: PingFangSC-Light, PingFang SC;
+    padding-left:18px;
+    padding-right: 18px;
+    padding-bottom: 12px;
+    margin-right: 24px;
+}
+
+.links{
+    background-color: white;
+    width: 1440px;
+    margin: 0 auto;
+    padding-top: 63px;
+}
+
+.links .des{
+    color: #A1A1A6;
+    font-size: 14px;
+    margin-top: 16px;
+    display: block;
+}
+.bmail_icon{
+    width: 274px;
+    height: 278px;
+}
+.links .group{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-left: 144px;
+    margin-right: 144px;
+}
+.links .item{
+    display: flex;
+    flex-direction: column;
+    width: 564px;
+    background-color: #F4F6F7;
+    align-items: center;
+    justify-content: center;
+    border-radius: 42px;
+    height: 412px;
+    flex: 1;
+    margin-left: 24px;
+}
