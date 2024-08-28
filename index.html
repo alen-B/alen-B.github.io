@@ -45,7 +45,7 @@
     .navbar a:hover {
       color: #F28552;
     }
-    .navbar-div a.active{
+    .navbar-div a.active {
       color: #F28552;
       font-weight: 600;
     }
@@ -82,7 +82,8 @@
       color: #F28552;
     }
 
-    .section {
+    .section,
+    .bmail_extension {
       padding: 50px 20px;
       text-align: center;
     }
@@ -135,15 +136,48 @@
 
     .modal-content {
       margin: auto;
-      display: block;
-      max-width: 80%;
-      max-height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 8%;
+      height: 100%;
+      box-sizing: border-box;
+      position: relative;
     }
 
     .modal-content img {
-      width: 100%;
-      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
     .close {
@@ -202,15 +236,15 @@
   <div class="steps-container">
     <div class="step">
       <p>1.点击创建账号,进入下一页输入密码.</p>
-      <img src="file/create.png" alt="Step 1 Image">
+      <img src="file/create.png" alt="Step 1 Image" class="zoom-img-instructions">
     </div>
     <div class="step">
       <p>2.已有账号,点击导入账号,输入密钥</p>
-      <img src="file/import.png" alt="Step 2 Image">
+      <img src="file/import.png" alt="Step 2 Image" class="zoom-img-instructions">
     </div>
     <div class="step">
       <p>3.进入首页之后,点击绑定邮箱,完成绑定后就可以收发加密邮件啦</p>
-      <img src="file/bing.png"  alt="Step 3 Image">
+      <img src="file/bing.png" alt="Step 3 Image" class="zoom-img-instructions">
     </div>
   </div>
 </div>
@@ -221,59 +255,118 @@
   <div class="steps-container">
     <div class="step">
       <p>1.点击加密按钮,点击发送,即可发送一封加密邮件</p>
-      <img src="file/outbox.png" alt="Email Step 1 Image" class="zoom-img">
+      <img src="file/outbox.png" alt="Email Step 1 Image" class="zoom-img-email">
     </div>
     <div class="step">
       <p>2.收到加密邮件后,点击解密,可以查看完整内容</p>
-      <img src="file/inbox.png" alt="Email Step 2 Image" class="zoom-img">
+      <img src="file/inbox.png" alt="Email Step 2 Image" class="zoom-img-email">
     </div>
     <div class="step">
       <p>3.回复邮件时,点解密按钮,即可回复邮件</p>
-      <img src="file/reply.png" alt="Email Step 3 Image" class="zoom-img">
+      <img src="file/reply.png" alt="Email Step 3 Image" class="zoom-img-email">
     </div>
   </div>
 </div>
 
-<!-- Modal to display full-size images -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <div class="modal-content" id="img01">
-    <img src="" alt="Zoomed Image" id="modal-img">
+<!-- bmail_extension -->
+<div class="bmail_extension" id="extension" style="padding-top: 0">
+  <h2 style="margin-top: 0">如何安装插件</h2>
+  <div class="steps-container">
+    <div class="step">
+      <p>1.点击 Chrome 浏览器右上角菜单栏，从“扩展程序”中打开“管理扩展程序”</p>
+      <img src="file/extension1.png" alt="Extension Step 1 Image" class="zoom-img-extension">
+    </div>
+    <div class="step">
+      <p>2. 打开开发者模式</p>
+      <img src="file/extension2.png" alt="Extension Step 2 Image" class="zoom-img-extension">
+    </div>
+    <div class="step">
+      <p>3.点击“加载以解压的扩展程序”;即选中已下载的bmail插件并将其解压后的文件</p>
+      <img src="file/extension3.png" alt="Extension Step 3 Image" class="zoom-img-extension">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Instructions Section -->
+<div id="myModalInstructions" class="modal">
+  <span class="close" onclick="document.getElementById('myModalInstructions').style.display='none'">&times;</span>
+  <div class="modal-content">
+    <img src="" alt="Zoomed Instructions Image" id="modal-img-instructions">
+    <a class="prev" id="prevBtnInstructions">&#10094;</a>
+    <a class="next" id="nextBtnInstructions">&#10095;</a>
+  </div>
+</div>
+
+<!-- Modal for Email Section -->
+<div id="myModalEmail" class="modal">
+  <span class="close" onclick="document.getElementById('myModalEmail').style.display='none'">&times;</span>
+  <div class="modal-content">
+    <img src="" alt="Zoomed Email Image" id="modal-img-email">
+    <a class="prev" id="prevBtnEmail">&#10094;</a>
+    <a class="next" id="nextBtnEmail">&#10095;</a>
+  </div>
+</div>
+
+<!-- Modal for Extension Section -->
+<div id="myModalExtension" class="modal">
+  <span class="close" onclick="document.getElementById('myModalExtension').style.display='none'">&times;</span>
+  <div class="modal-content">
+    <img src="" alt="Zoomed Extension Image" id="modal-img-extension">
+    <a class="prev" id="prevBtnExtension">&#10094;</a>
+    <a class="next" id="nextBtnExtension">&#10095;</a>
   </div>
 </div>
 
 <script>
-  // Get all images with class 'zoom-img'
-  const images = document.querySelectorAll('.zoom-img');
-  const modal = document.getElementById("myModal");
-  const modalImg = document.getElementById("modal-img");
-  const span = document.getElementsByClassName("close")[0];
+  // Function to handle modal image viewing for a set of images
+  function setupImageModal(imagesClass, modalId, modalImgId, prevBtnId, nextBtnId) {
+    const images = document.querySelectorAll(imagesClass);
+    const modal = document.getElementById(modalId);
+    const modalImg = document.getElementById(modalImgId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+    let currentIndex = 0;
 
-  images.forEach(img => {
-    img.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
+    function showImage(index) {
+      if (index < 0) index = images.length - 1; // wrap around to last image
+      if (index >= images.length) index = 0; // wrap around to first image
+      modalImg.src = images[index].src;
+      currentIndex = index;
     }
-  });
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
+    images.forEach((img, index) => {
+      img.onclick = function() {
+        modal.style.display = "block";
+        showImage(index);
+      }
+    });
+
+    prevBtn.onclick = function() {
+      showImage(currentIndex - 1);
+    }
+
+    nextBtn.onclick = function() {
+      showImage(currentIndex + 1);
+    }
+
+    modal.onclick = function(event) {
+      if (event.target === modalImg || event.target === prevBtn || event.target === nextBtn) {
+        return; // Do nothing if the image itself or buttons are clicked
+      }
+      modal.style.display = "none";
+    }
   }
 
-  // When the user clicks anywhere outside of the image, close it
-  modal.onclick = function(event) {
-    if (event.target === modalImg) {
-      return; // Do nothing if the image itself is clicked
-    }
-    modal.style.display = "none";
-  }
+  // Setup modals for each image set
+  setupImageModal('.zoom-img-instructions', 'myModalInstructions', 'modal-img-instructions', 'prevBtnInstructions', 'nextBtnInstructions');
+  setupImageModal('.zoom-img-email', 'myModalEmail', 'modal-img-email', 'prevBtnEmail', 'nextBtnEmail');
+  setupImageModal('.zoom-img-extension', 'myModalExtension', 'modal-img-extension', 'prevBtnExtension', 'nextBtnExtension');
 
-    // Get all navigation links inside the .navbar-div
-    const navLinks = document.querySelectorAll('.navbar-div a');
+  // Get all navigation links inside the .navbar-div
+  const navLinks = document.querySelectorAll('.navbar-div a');
 
-    // Add click event listener to each link
-    navLinks.forEach(link => {
+  // Add click event listener to each link
+  navLinks.forEach(link => {
     link.addEventListener('click', function() {
       // Remove the 'active' class from all links
       navLinks.forEach(link => link.classList.remove('active'));
@@ -282,7 +375,6 @@
       this.classList.add('active');
     });
   });
-
 
 </script>
 
