@@ -206,7 +206,31 @@
         width: 80%;
       }
     }
-
+    .supported-emails {
+      width: calc(80% - 48px);
+      border: 2px solid #EEEFF0;
+      padding: 48px 0;
+      position: relative;
+      margin: auto;
+    }
+    .supported-emails h2{
+      background-color: white;
+      padding: 0 16px;
+      position: absolute;
+      top: -56px;
+      left: calc(50% - 255px);
+    }
+    .supported-emails-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 创建三个等宽的列 */
+      gap: 24px; /* 图片之间的间距 */
+      justify-items: center; /* 图片水平居中 */
+      align-items: center; /* 图片垂直居中 */
+    }
+    .supported-emails-grid img {
+      max-width:50%; /* 限制图片的最大宽度 */
+      height: auto; /* 保持图片的原始比例 */
+    }
   </style>
 </head>
 <body>
@@ -228,6 +252,26 @@
   <h1>Welcome to Our Service</h1>
   <p>Your gateway to seamless digital experiences.</p>
   <button class="download-btn"><a href="file/extension.zip" download="extension.zip" style="color: white; text-decoration: none;">Download Now</a></button>
+</div>
+
+
+<!-- bmail_extension -->
+<div class="bmail_extension" id="extension" style="padding-top: 0">
+  <h2 style="margin-top: 72px">如何安装插件</h2>
+  <div class="steps-container">
+    <div class="step">
+      <p>1.点击 Chrome 浏览器右上角菜单栏，从“扩展程序”中打开“管理扩展程序”</p>
+      <img src="file/extension1.png" alt="Extension Step 1 Image" class="zoom-img-extension">
+    </div>
+    <div class="step">
+      <p>2. 打开开发者模式</p>
+      <img src="file/extension2.png" alt="Extension Step 2 Image" class="zoom-img-extension">
+    </div>
+    <div class="step">
+      <p>3.点击“加载以解压的扩展程序”;即选中已下载的bmail插件并将其解压后的文件</p>
+      <img src="file/extension3.png" alt="Extension Step 3 Image" class="zoom-img-extension">
+    </div>
+  </div>
 </div>
 
 <!-- Instructions Section -->
@@ -268,25 +312,6 @@
   </div>
 </div>
 
-<!-- bmail_extension -->
-<div class="bmail_extension" id="extension" style="padding-top: 0">
-  <h2 style="margin-top: 0">如何安装插件</h2>
-  <div class="steps-container">
-    <div class="step">
-      <p>1.点击 Chrome 浏览器右上角菜单栏，从“扩展程序”中打开“管理扩展程序”</p>
-      <img src="file/extension1.png" alt="Extension Step 1 Image" class="zoom-img-extension">
-    </div>
-    <div class="step">
-      <p>2. 打开开发者模式</p>
-      <img src="file/extension2.png" alt="Extension Step 2 Image" class="zoom-img-extension">
-    </div>
-    <div class="step">
-      <p>3.点击“加载以解压的扩展程序”;即选中已下载的bmail插件并将其解压后的文件</p>
-      <img src="file/extension3.png" alt="Extension Step 3 Image" class="zoom-img-extension">
-    </div>
-  </div>
-</div>
-
 <!-- Modal for Instructions Section -->
 <div id="myModalInstructions" class="modal">
   <span class="close" onclick="document.getElementById('myModalInstructions').style.display='none'">&times;</span>
@@ -315,6 +340,17 @@
     <a class="prev" id="prevBtnExtension">&#10094;</a>
     <a class="next" id="nextBtnExtension">&#10095;</a>
   </div>
+</div>
+<div style="margin: 48px 0 72px">
+<div class="supported-emails ">
+  <h2>请点击一下网站后,在点开插件</h2>
+  <div class="supported-emails-grid">
+      <img src="../file/qqmail.png" style="cursor: pointer;">
+      <img src="../file/163mail.png" style="cursor: pointer;">
+      <img src="../file/gmail.png" style="cursor: pointer;">
+      <img src="../file/outlook.png" style="cursor: pointer;">
+  </div>
+</div>
 </div>
 
 <script>
