@@ -228,6 +228,9 @@
   <h1>Welcome to Our Service</h1>
   <p>Your gateway to seamless digital experiences.</p>
   <button class="download-btn"><a href="file/extension.zip" download="extension.zip" style="color: white; text-decoration: none;">Download Now</a></button>
+  <button class="download-btn"><a href="file/bmailSDK.mac" download="bmailSDK.mac" style="color: white; text-decoration: none;">SDK Mac OS</a></button>
+  <a href="https://github.com/realbmail/sdk_exmaples">Sdk Example</a>
+
 </div>
 
 <!-- Instructions Section -->
@@ -287,6 +290,26 @@
   </div>
 </div>
 
+
+<!-- bmail_sdk -->
+<div class="bmail_extension" id="sdk" style="padding-top: 0">
+  <h2 style="margin-top: 0">如何发送加密邮件验证码</h2>
+  <div class="steps-container">
+    <div class="step">
+      <p>1.服务端通过SDK发送验证码”</p>
+      <img src="file/sdk1.png" alt="SDK Step 1 Image" class="zoom-img-sdk">
+    </div>
+    <div class="step">
+      <p>2. 客户邮箱接收到加密后验证码</p>
+      <img src="file/sdk2.png" alt="SDK Step 2 Image" class="zoom-img-sdk">
+    </div>
+    <div class="step">
+      <p>3.只有拥有BMail插件的才能查看邮件内容</p>
+      <img src="file/sdk3.png" alt="SDK Step 3 Image" class="zoom-img-sdk">
+    </div>
+  </div>
+</div>
+
 <!-- Modal for Instructions Section -->
 <div id="myModalInstructions" class="modal">
   <span class="close" onclick="document.getElementById('myModalInstructions').style.display='none'">&times;</span>
@@ -312,6 +335,17 @@
   <span class="close" onclick="document.getElementById('myModalExtension').style.display='none'">&times;</span>
   <div class="modal-content">
     <img src="" alt="Zoomed Extension Image" id="modal-img-extension">
+    <a class="prev" id="prevBtnExtension">&#10094;</a>
+    <a class="next" id="nextBtnExtension">&#10095;</a>
+  </div>
+</div>
+
+
+<!-- Modal for Extension Section -->
+<div id="myModalSdk" class="modal">
+  <span class="close" onclick="document.getElementById('myModalSdk').style.display='none'">&times;</span>
+  <div class="modal-content">
+    <img src="" alt="Zoomed Sdk Image" id="modal-img-sdk">
     <a class="prev" id="prevBtnExtension">&#10094;</a>
     <a class="next" id="nextBtnExtension">&#10095;</a>
   </div>
@@ -361,6 +395,7 @@
   setupImageModal('.zoom-img-instructions', 'myModalInstructions', 'modal-img-instructions', 'prevBtnInstructions', 'nextBtnInstructions');
   setupImageModal('.zoom-img-email', 'myModalEmail', 'modal-img-email', 'prevBtnEmail', 'nextBtnEmail');
   setupImageModal('.zoom-img-extension', 'myModalExtension', 'modal-img-extension', 'prevBtnExtension', 'nextBtnExtension');
+  setupImageModal('.zoom-img-sdk', 'myModalSdk', 'modal-img-sdk', 'prevBtnExtension', 'nextBtnExtension');
 
   // Get all navigation links inside the .navbar-div
   const navLinks = document.querySelectorAll('.navbar-div a');
