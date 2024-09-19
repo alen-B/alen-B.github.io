@@ -389,10 +389,11 @@
   <span class="close" onclick="document.getElementById('myModalSdk').style.display='none'">&times;</span>
   <div class="modal-content">
     <img src="" alt="Zoomed Sdk Image" id="modal-img-sdk">
-    <a class="prev" id="prevBtnExtension">&#10094;</a>
-    <a class="next" id="nextBtnExtension">&#10095;</a>
+    <a class="prev" id="prevBtnSdk">&#10094;</a>
+    <a class="next" id="nextBtnSdk">&#10095;</a>
   </div>
 </div>
+
 
 <script>
   // Function to handle modal image viewing for a set of images
@@ -438,7 +439,8 @@
   setupImageModal('.zoom-img-instructions', 'myModalInstructions', 'modal-img-instructions', 'prevBtnInstructions', 'nextBtnInstructions');
   setupImageModal('.zoom-img-email', 'myModalEmail', 'modal-img-email', 'prevBtnEmail', 'nextBtnEmail');
   setupImageModal('.zoom-img-extension', 'myModalExtension', 'modal-img-extension', 'prevBtnExtension', 'nextBtnExtension');
-  setupImageModal('.zoom-img-sdk', 'myModalSdk', 'modal-img-sdk', 'prevBtnExtension', 'nextBtnExtension');
+  setupImageModal('.zoom-img-sdk', 'myModalSdk', 'modal-img-sdk', 'prevBtnSdk', 'nextBtnSdk');
+
 
   // Get all navigation links inside the .navbar-div
   const navLinks = document.querySelectorAll('.navbar-div a');
