@@ -67,7 +67,8 @@
       margin: 0;
     }
 
-    .download-btn {
+    .download-btn,
+    .github-link {
       background-color: #F28552;
       color: white;
       padding: 15px 30px;
@@ -75,9 +76,14 @@
       font-size: 18px;
       border-radius: 5px;
       margin: 24px;
+      border: none;
     }
 
-    .download-btn:hover {
+    .download-btn:hover{
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #F28552;
+    }
+    .github-link:hover {
       background-color: rgba(255, 255, 255, 0.3);
       color: #F28552;
     }
@@ -231,6 +237,9 @@
       max-width:50%; /* 限制图片的最大宽度 */
       height: auto; /* 保持图片的原始比例 */
     }
+    .img-border {
+      border: 2px solid #f0f1f3;
+    }
   </style>
 </head>
 <body>
@@ -253,25 +262,25 @@
   <p>Your gateway to seamless digital experiences.</p>
   <button class="download-btn"><a href="file/extension.zip" download="extension.zip" style="color: white; text-decoration: none;">Download Now</a></button>
   <button class="download-btn"><a href="file/bmailSDK.mac" download="bmailSDK.mac" style="color: white; text-decoration: none;">SDK Mac OS</a></button>
-  <a href="https://github.com/realbmail/sdk_exmaples">Sdk Example</a>
+  <button class="github-link"><a href="https://github.com/realbmail/sdk_exmaples" style="color: white; text-decoration: none;">Sdk Example</a></button>
 
 </div>
 
 <!-- bmail_extension -->
-<div class="bmail_extension" id="extension" style="padding-top: 0">
+<div class="bmail_extension" id="extension" style="padding-top: 48px; background-color: white; margin-bottom: 86px">
   <h2 style="margin-top: 72px">如何安装插件</h2>
   <div class="steps-container">
     <div class="step">
       <p>1.点击 Chrome 浏览器右上角菜单栏，从“扩展程序”中打开“管理扩展程序”</p>
-      <img src="file/extension1.png" alt="Extension Step 1 Image" class="zoom-img-extension">
+      <img src="file/extension1.png" alt="Extension Step 1 Image" class="zoom-img-extension img-border">
     </div>
     <div class="step">
       <p>2. 打开开发者模式</p>
-      <img src="file/extension2.png" alt="Extension Step 2 Image" class="zoom-img-extension">
+      <img src="file/extension2.png" alt="Extension Step 2 Image" class="zoom-img-extension img-border">
     </div>
     <div class="step">
       <p>3.点击“加载以解压的扩展程序”;即选中已下载的bmail插件并将其解压后的文件</p>
-      <img src="file/extension3.png" alt="Extension Step 3 Image" class="zoom-img-extension">
+      <img src="file/extension3.png" alt="Extension Step 3 Image" class="zoom-img-extension img-border">
     </div>
   </div>
 </div>
@@ -296,20 +305,20 @@
 </div>
 
 <!-- Email Section -->
-<div class="section" id="email" style="padding-top: 0">
+<div class="section" id="email" style="padding-top: 48px; background-color: white; margin-bottom: 86px">
   <h2 style="margin-top: 0">邮件加解密</h2>
   <div class="steps-container">
     <div class="step">
       <p>1.点击加密按钮,点击发送,即可发送一封加密邮件</p>
-      <img src="file/outbox.png" alt="Email Step 1 Image" class="zoom-img-email">
+      <img src="file/outbox.png" alt="Email Step 1 Image" class="zoom-img-email img-border">
     </div>
     <div class="step">
       <p>2.收到加密邮件后,点击解密,可以查看完整内容</p>
-      <img src="file/inbox.png" alt="Email Step 2 Image" class="zoom-img-email">
+      <img src="file/inbox.png" alt="Email Step 2 Image" class="zoom-img-email img-border">
     </div>
     <div class="step">
       <p>3.回复邮件时,点解密按钮,即可回复邮件</p>
-      <img src="file/reply.png" alt="Email Step 3 Image" class="zoom-img-email">
+      <img src="file/reply.png" alt="Email Step 3 Image" class="zoom-img-email img-border">
     </div>
   </div>
 </div>
@@ -362,9 +371,9 @@
     <a class="next" id="nextBtnExtension">&#10095;</a>
   </div>
 </div>
-<div style="margin: 48px 0 72px">
+<div style="margin: 48px 0 72px; background-color: white;padding: 72px 0">
 <div class="supported-emails ">
-  <h2>请点击一下网站后,在点开插件</h2>
+  <h2>请点击以下网站后,再点开插件</h2>
   <div class="supported-emails-grid">
       <img src="../file/qqmail.png" style="cursor: pointer;">
       <img src="../file/163mail.png" style="cursor: pointer;">
