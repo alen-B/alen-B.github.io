@@ -269,24 +269,21 @@
   <h1>Welcome to Our Service</h1>
   <p>Your gateway to seamless digital experiences.</p>
   <div style="display: flex; justify-content: center; align-items: center">
-    <button class="google-store">
+    <button class="google-store" onclick="downloadLink('google-link')">
       <img src="file/browser-chrome.svg">
-      <a href="https://chromewebstore.google.com/detail/bmail/kjlhomfbkgfkkfdpcolkecfanmipiiic" style="color: white; text-decoration: none; margin-top: 8px">Google</a>
+      <a id="google-link" href="https://chromewebstore.google.com/detail/bmail/kjlhomfbkgfkkfdpcolkecfanmipiiic" style="color: white; text-decoration: none; margin-top: 8px">Google</a>
     </button>
-    <button class="firefox-store">
-      <img src="file/browser-firefox.svg">
-      <a href="https://chromewebstore.google.com/detail/bmail/kjlhomfbkgfkkfdpcolkecfanmipiiic" style="color: white; text-decoration: none; margin-top: 8px">FireFox</a>
-    </button>
-    <button class="download-btn">
+    <button class="download-btn" onclick="downloadLink('zip-link')">
       <img src="file/file-zip.svg" style="width: 40px; height: auto">
-      <a href="file/extension.zip" download="extension.zip" style="color: white; text-decoration: none; margin-top: 8px">Local(Zip)</a>
+      <a id="zip-link" href="file/extension.zip" download="extension.zip" style="color: white; text-decoration: none; margin-top: 8px">Local(Zip)</a>
     </button>
-    <button class="download-btn">
+    <button class="download-btn" onclick="downloadLink('sdk-mac-link')">
       <img src="file/file-sdk.svg" style="width: 40px; height: auto">
-      <a href="file/bmailSDK.mac" download="bmailSDK.mac" style="color: white; text-decoration: none;margin-top: 8px">SDK (Mac)</a>
+      <a id="sdk-mac-link" href="file/bmailSDK.mac" download="bmailSDK.mac" style="color: white; text-decoration: none;margin-top: 8px">SDK (Mac)</a>
     </button>
-    <button class="github-link"><img src="file/link-github.svg" style="width: 40px; height: auto">
-      <a href="https://github.com/realbmail/sdk_exmaples" style="color: white; text-decoration: none; margin-top: 8px">Sdk Example</a>
+    <button class="github-link" onclick="downloadLink('github-link')">
+      <img src="file/link-github.svg" style="width: 40px; height: auto">
+      <a id="github-link" href="https://github.com/realbmail/sdk_exmaples" style="color: white; text-decoration: none; margin-top: 8px">Sdk Example</a>
     </button>
   </div>
 </div>
@@ -421,6 +418,13 @@
 
 
 <script>
+
+
+  function downloadLink(linkId) {
+    const link = document.getElementById(linkId);
+    link.click();
+  }
+
   // Function to handle modal image viewing for a set of images
   function setupImageModal(imagesClass, modalId, modalImgId, prevBtnId, nextBtnId) {
     const images = document.querySelectorAll(imagesClass);
