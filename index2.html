@@ -19,7 +19,7 @@
         <li><a href="#download">download</a></li>
         <li><a href="#pricing">pricing</a></li>
         <li><a href="#email">Email</a></li>
-        <li><a href="#partners">GitHub</a></li>
+        <li><a href="https://github.com/realbmail" target="_blank">GitHub</a></li>
     </ul>
 </nav>
 
@@ -27,14 +27,14 @@
 <section class="hero-section">
     <div class="banner">
         <div class="bmail-banner-left">
-            <img src="https://cdn.prod.website-files.com/65b21eba16cd83b427cde23e/65b38da8001c4a9a8cc48adb_Group%201000008335.svg"
-                 loading="lazy" width="811" alt="" class="bmail-banner-image">
+            <img src="file/main_page.png"
+                 loading="lazy" width="531" alt="" class="bmail-banner-image">
         </div>
         <div class="banner-heading">
-            <h1 class="banner-heading-title">The most trusted password manager!</h1>
-            <p class="bmail-paragraph" style="color: white">Bitwarden is the best password manager for securely storing,
-                managing, and sharing sensitive online data such as passwords, passkeys, and credit cards.</p>
-            <button class="bmail-button">Download Bmail</button>
+            <h1 class="banner-heading-title">Take Control of Your Data</h1>
+            <p class="bmail-paragraph" style="color: white">Easily secure emails and attachments with Bitcoin-level blockchain encryption,
+                powered by a decentralized extension that turns your account into a personal blockchain wallet.</p>
+            <button class="bmail-button" id="extensionDownBtn">Download Bmail</button>
         </div>
     </div>
 </section>
@@ -43,7 +43,7 @@
 <section class="section" id="intro">
     <div class="w-layout-blockcontainer container-two w-container">
         <div class="the-most-block-wrap">
-            <h2 class="a-web-heading the-most-heading">The wallet that makes crypto simple. </h2>
+            <h2 class="a-web-heading the-most-heading">The Real Web3 Platform</h2>
             <div class="bmail-content-block-wrap">
                 <div class="bmail-content-wrap">
                     <div class="bmail-image-block">
@@ -301,7 +301,7 @@
                         <img src="https://cdn.prod.website-files.com/65b21eba16cd83b427cde23e/662a28d943d2e1892a7929ae_tiktok.png"
                              loading="lazy" alt="" class="image-2">
                     </a>
-                    <a href="https://medium.com/the-cirus-foundation" target="_blank" class="link-block w-inline-block">
+                    <a href="https://medium.com/@basChain" target="_blank" class="link-block w-inline-block">
                         <img src="https://cdn.prod.website-files.com/65b21eba16cd83b427cde23e/662a2a6f8a4ad51700c4e415_Frame%201000008431.png"
                              loading="lazy" alt="" class="image-2">
                     </a>
@@ -356,6 +356,10 @@
 
     //滑块儿
     document.addEventListener('DOMContentLoaded', () => {
+        initButtons();
+    });
+
+    function initButtons() {
         const buttons = document.querySelectorAll('.tab-button');
         const slider = document.querySelector('.tab-slider');
         const tabSwitch = document.querySelector('.tab-switch');
@@ -376,7 +380,11 @@
         const buttonWidth = tabSwitch.clientWidth / buttons.length;
         slider.style.width = `${buttonWidth - 4}px`; // 滑块宽度等于按钮宽度减去内边距
         slider.style.transform = `translateX(0)`;
-    });
+
+        document.getElementById("extensionDownBtn").addEventListener('click', () => {
+            window.open("https://chromewebstore.google.com/detail/bmail/kjlhomfbkgfkkfdpcolkecfanmipiiic", "_blank")
+        });
+    }
 
 </script>
 </body>
